@@ -8,18 +8,115 @@
 		<title>Notes</title>
 	</head>
 	<body>
-		<slot />
+		<div id="all">
+			<main>
+				<slot />
+			</main>
+			<br />
+			<footer>
+				<p>
+					<a href="/">notes</a>
+					<div id="pd">
+						All content on this site is in the public domain.<br />
+						Built with <a
+							href="https://astro.build"
+							rel="noopener noreferrer"
+							><img src="/astro.svg" alt="Astro" /></a
+						>
+						and <a
+							href="https://svelte.dev"
+							rel="noopener noreferrer"
+							><img src="/svelte.svg" alt="Svelte" /></a
+						>,
+						<br />
+						See the <a
+							href="https://github.com/Heliodex/notes"
+							rel="noopener noreferrer">source code</a
+						>
+					</div>
+					<a href="http://heliodex.cf">heliodex.cf</a>
+				</p>
+			</footer>
+		</div>
 	</body>
 </html>
 
-<style lang="sass" is:global>
-	html
-		font-family: system-ui, sans-serif
-		background-color: #F6F6F6
+<style lang="sass">
+	#all
+		display: flex
+		flex-direction: column
+		height: 100vh
+		z-index: 1
 
+	main
+		margin: 0 2rem
+		@media only screen and (min-width: 105ch)
+			width: 100ch
+			margin: auto
+
+	footer
+		border-top: 1px solid #333
+		background: #111
+		width: 100vw
+		position: relative
+		left: 0
+		text-align: center
+		flex-shrink: 0
+		padding: 1.5vh
+		a
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+
+	#pd
+		margin: 1rem 0
+
+	img
+		height: 1.2rem
+		vertical-align: middle
+		margin: 0
+		colour: #fff
+</style>
+
+<style lang="sass" is:global>
+	@font-face
+		font-family: "Lexend"
+		src: local("Lexend Regular"), local("Lexend"), url("/Lexend.woff2") format("woff2"), url("/Lexend.woff") format("woff"), url("/Lexend.ttf") format("truetype")
+		font-weight: normal
+		font-style: normal
+		font-display: swap
+
+	html, button
+		font-family: "Lexend", sans-serif
+
+	html
+		background-color: #080808
+		color: white
+		overflow-x: hidden
+
+	body
+		margin: 0
+
+	main
+		// responsive width
+		padding-bottom: 5vh
+		padding-top: 5vh//10vh
+		flex: 1 0 auto
 	li
 		margin: 0.3rem 0 0.3rem 0
 
 	.q
 		color: green
+
+	a
+		color: cyan
+		&:visited
+			color: palevioletred
+		&:hover
+			color: red
+		&:active
+			color: yellow
+
+	h2
+		color: #caf
 </style>
