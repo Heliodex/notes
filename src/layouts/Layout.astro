@@ -97,16 +97,11 @@ import { ViewTransitions } from "astro:transitions"
 <style lang="stylus" is:global>
 	@font-face
 		font-family Lexend
-		src local("Lexend Regular"),
-			local("Lexend"),
-			url("/Lexend.woff2") format("woff2"),
-			url("/Lexend.woff") format("woff"),
-			url("/Lexend.ttf") format("truetype")
-		font-weight normal
-		font-style normal
+		src url("/Lexend.woff2") format("woff2")
 		font-display swap
 
-	html, button
+	html
+	button
 		font-family Lexend, sans-serif
 
 	html
