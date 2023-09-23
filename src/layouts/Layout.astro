@@ -1,3 +1,7 @@
+---
+import { ViewTransitions } from "astro:transitions"
+---
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -5,11 +9,18 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<meta
+			name="description"
+			content="Collection of subject notes"
+		/>
 		<title>Notes</title>
+
+		<ViewTransitions />
 	</head>
 	<body>
 		<div id="all">
 			<main>
+				<a href="/" transition:name="title"><h1>Notes</h1></a>
 				<slot />
 			</main>
 			<br />
@@ -47,6 +58,11 @@
 		flex-direction: column
 		height: 100vh
 		z-index: 1
+
+	h1
+		font-size: 1.5rem
+		font-weight: 400
+		color: white
 
 	main
 		margin: 0 2rem
