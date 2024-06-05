@@ -10,13 +10,13 @@
 				overflow: hidden;
 			`
 			return x
-		},
+		}
 	})
 
 	let visible = false
 </script>
 
-<button on:click={() => visible = !visible}>
+<button on:click={() => (visible = !visible)}>
 	{q}
 </button>
 

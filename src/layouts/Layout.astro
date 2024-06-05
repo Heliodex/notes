@@ -2,17 +2,14 @@
 import { ViewTransitions } from "astro:transitions"
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<meta
-			name="description"
-			content="Collection of subject notes"
-		/>
+		<meta name="description" content="Collection of subject notes" />
 		<title>Notes</title>
 
 		<ViewTransitions />
@@ -32,27 +29,28 @@ import { ViewTransitions } from "astro:transitions"
 						Built with <a
 							href="https://astro.build"
 							rel="noopener noreferrer"
-							><img src="/astro.svg" alt="Astro" /></a
 						>
+							<img src="/astro.svg" alt="Astro" />
+						</a>
 						and <a
 							href="https://svelte.dev"
 							rel="noopener noreferrer"
-							><img src="/svelte.svg" alt="Svelte" /></a
-						>,
+						>
+							<img src="/svelte.svg" alt="Svelte" />
+						</a>,
 						<br />
 						See the <a
 							href="https://github.com/Heliodex/notes"
-							rel="noopener noreferrer">source code</a
+							rel="noopener noreferrer"
 						>
+							source code
+						</a>
 					</div>
 					<a href="http://heliodex.cf">heliodex.cf</a>
 				</p>
 			</footer>
 		</div>
-	</body>
-</html>
-
-<style lang="stylus">
+	</body><style lang="stylus">
 	#all
 		display flex
 		flex-direction column
@@ -94,7 +92,7 @@ import { ViewTransitions } from "astro:transitions"
 		colour #fff
 </style>
 
-<style lang="stylus" is:global>
+	<style lang="stylus" is:global>
 	@font-face
 		font-family Lexend
 		src url("/Lexend.woff2") format("woff2")
@@ -135,3 +133,4 @@ import { ViewTransitions } from "astro:transitions"
 	h2
 		color #caf
 </style>
+</html>
